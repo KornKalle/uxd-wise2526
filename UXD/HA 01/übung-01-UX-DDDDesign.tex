@@ -1,0 +1,116 @@
+\documentclass[a4paper,10pt]{article}
+
+% Hier die Nummer des Blatts und Autoren angeben.
+\newcommand{\blatt}{1}
+\newcommand{\autor}{ UX-DDDDesign / Maurice Da Cruz Guerreiro, Lara-Marie Ehlen, Henry Sheng-Long Hon, Julian Mühlbauer, Nils Berg }
+
+\usepackage{hci}
+% Extra packages for better table handling
+\usepackage{tabularx}
+\usepackage{caption}
+\captionsetup[table]{position=bottom,font=small}
+\usepackage{setspace}
+\setstretch{0.97}
+% Reduce vertical spacing between paragraphs
+\setlength{\parskip}{0pt}
+% Tighten spacing around floats and captions
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\captionsetup{skip=4pt}
+% Reduce spacing around sectioning commands (especially \paragraph)
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
+\titlespacing*{\subsection}{0pt}{6pt plus 2pt minus 2pt}{3pt plus 1pt minus 1pt}
+\titlespacing*{\paragraph}{0pt}{2pt plus 1pt minus 1pt}{0.5em}
+
+\begin{document}
+% Seitenkopf mit Informationen
+    \kopf
+    \renewcommand{\figurename}{Figure}
+
+    \title{PACT Analyzation Amazon Echo 8}
+
+
+    \section{People}\label{sec:people}
+    Supports a wide range of users from different backgrounds and ages via voice and touch interaction.
+
+    \begin{table}[htbp]
+        \centering
+        % Make table fit the text width and wrap long text
+        \begin{tabularx}{\textwidth}{|l|X|l|X|}
+            \hline
+            \textbf{User Group}      & \textbf{Usage}                                           & \textbf{Age} & \textbf{Device Usage}                         \\
+            \hline
+            Families                 & Entertainment, Smart Home control and communication      & 8 to 60      & One device per household                      \\
+            \hline
+            Smart Home enthusiasts   & Smart Home control, automation                           & 18 to 40     & One user uses many devices from one ecosystem \\
+            \hline
+            Elderly people           & Support in daily tasks and communication                 & 60+          & One to two persons share one device           \\
+            \hline
+            People with disabilities & Support in otherwise challenging tasks and communication & 5+           & One person uses one device \\
+            \hline
+        \end{tabularx}
+        \caption{User groups, usage, age, and device usage for Amazon Echo 8}
+        \label{tab:user-groups}
+    \end{table}
+
+
+    \section{Activities}\label{sec:activities}
+
+    \paragraph{Media and entertainment}
+    Playback of audio and video streaming on the 8-inch display.
+    Voice-first control is supported by touch when needed.
+
+    \paragraph{Smart home control}
+    Operation of lights, thermostats, plugs, and routines/automation.
+    Interactions are typically short commands with occasional multistep dialogs for setup.
+
+    \paragraph{Communication}
+    Voice and video calls, announcements, messaging across household members and contacts.
+
+    \paragraph{Information and assistance}
+    Timers, alarms, reminders, weather, shopping lists, translations, and quick research.
+
+    \paragraph{Accessibility}
+    Hands-free operation, natural language commands, guided multistep interactions that reduce cognitive and motor load.
+
+    \section{Contexts}\label{sec:contexts}
+
+    \paragraph{Physical}
+    Living room, kitchen, and bedroom use with varying noise and lighting.
+    The device is typically used at a 1--5 m distance in shared spaces.
+
+    \paragraph{Social}
+    Individual and family use, including guests and children, with differing privacy expectations in shared households.
+
+    \paragraph{Organizational and technical}
+    Amazon account(s), household profiles, Wi\-Fi dependency, and skills/devices within the same ecosystem with clear data protection expectations.
+
+    \section{Technologies}\label{sec:technologies}
+
+    \paragraph{Inputs}
+    Microphone for voice input, touch input on the 8-inch display, camera for video calls, Bluetooth for pairing.
+    Control via Smartphone App.
+
+    \paragraph{Outputs}
+    Builtin speaker and the 8-inch screen for feedback and media, status LEDs.
+
+    \paragraph{Connectivity and integration}
+    Wi\-Fi and Bluetooth connectivity, an extensible Alexa ecosystem, support for smart home hubs/standards like matter via compatible devices.
+    Account linking via Cloud Services and smartphone apps.
+
+    \paragraph{Constraints and risks}
+    Requires power and network connectivity and account linking.
+    Privacy controls include mic mute and a camera shutter.
+    When voice fails, users can fall back to touch or the smartphone app.
+    Purchases use confirmations.
+    Parental control is supported via the smartphone app.
+
+
+    \section{Conclusion}\label{sec:conclusion}
+    The Echo Show 8 serves diverse users in shared home environments through voice-first, screen-supported interaction.
+    Typical activities are brief, repeatable, and benefit from automation and multimodal feedback.
+    Success depends on robust speech recognition, clear confirmations, privacy controls, and seamless integration with household accounts and smart devices.
+
+\end{document}
