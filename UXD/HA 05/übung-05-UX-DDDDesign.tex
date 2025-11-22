@@ -1,0 +1,143 @@
+\documentclass[a4paper,10pt]{article}
+
+% Hier die Nummer des Blatts und Autoren angeben.
+\newcommand{\blatt}{5}
+\newcommand{\autor}{ UX-DDDDesign / Maurice Da Cruz Guerreiro, Lara-Marie Ehlen, Henry Sheng-Long Hon, Julian Mühlbauer, Nils Berg }
+
+\usepackage{hci}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+\begin{document}
+% Seitenkopf mit Informationen
+    \kopf
+
+    \section*{Schlüsselpfad-Szenario: Posten eines Reels auf Instagram}
+
+    \subsection*{1. Episodisches Szenario}
+    
+    Marie ist 28 Jahre alt und arbeitet als Lifestyle Influencerin kommend aus Hamburg.
+    An einem sonnigen Samstagmorgen besucht sie während eines Berlin Urlaubs den Mauerpark, um das bunte Treiben des Mauerpark Flohmarkts zu erleben.
+    Während sie durch die Stände schlendert, entdeckt sie einen Straßenmusiker, der eine tolle Performance darbietet.
+    Sie nimmt ihr iPhone und filmt ein etwas 2 minütiges Video der Performance.
+    Zurück in ihrer AirBnB Unterkunft öffnet Marie die Instagram-App auf ihrem iPhone und tippt auf das Plus-Symbol am unteren Bildschirmrand.
+    Sie wählt die Option „Reel" aus dem Menü aus.
+    Marie wählt das zuvor aufgenommene Video aus ihrer Galerie aus und beginnt mit der Bearbeitung.
+    Sie schneidet das Video auf die besten 25 Sekunden zu und fügt einen beliebten Song aus der Instagram-Musikbibliothek hinzu.
+    Anschließend wendet sie einen Farbfilter an, um die Atmosphäre des Marktes besser einzufangen und die Farben wärmer erscheinen zu lassen..
+    Marie fügt noch ein Overlay hinzu: „Sonntagsvibes am Mauerpark" mit einer animierten Schriftart.
+    Sie taggt den Standort „Mauerpark Berlin" und fügt relevante Hashtags wie \#StreetMusic und \#BerlinLife hinzu.
+    Nach einer kurzen Vorschau ist sie zufrieden mit dem Ergebnis und tippt auf „Teilen".
+    Innerhalb von Minuten erhält ihr Reel die ersten Likes und Kommentare von ihren Follower:innen.
+
+    \subsection*{2. Konzeptionelles Szenario}
+    
+    Das System ermöglicht es Usern, kurze Videoformate zu erstellen und zu teilen.
+    Der User initiiert den Prozess durch Auswahl der Reel-Erstellungsfunktion in der Hauptnavigation.
+    Das System bietet zwei Hauptoptionen: Direktaufnahme über die App-Kamera oder Import bestehender Videos aus der Gerätebibliothek.
+    Nach der Videoauswahl präsentiert das System eine umfassende Bearbeitungsumgebung.
+    Diese umfasst Werkzeuge zur zeitlichen Anpassung des Videomaterials durch Trimmen und Schneiden.
+    Weitere Werkzeuge sind entweder voreingestellte Farbfilter oder möglichkeiten zur detaillierteren Anpassung der Farben.
+    Das System stellt eine kuratierte Musikbibliothek zur Verfügung, aus der Audio-Tracks ausgewählt und synchronisiert werden können.
+    Visuelle Anpassungen erfolgen durch Anwendung von Filtern und Effekten aus einer vordefinierten Bibliothek.
+    Das System ermöglicht das Hinzufügen von Textebenen mit verschiedenen Schriftarten und Animationsoptionen.
+    Nutzer können Sticker, GIFs und andere grafische Elemente aus der integrierten Bibliothek einfügen.
+    Das System bietet Funktionen zur Kennzeichnung von Standorten und anderen Nutzern mittels Tags und Verlinkungen des Usernames.
+    Vor der Veröffentlichung können Hashtags zur Kategorisierung und Reichweitensteigerung hinzugefügt werden.
+    Das System ermöglicht eine Vorschau des finalen Reels in Echtzeit.
+    Nach Bestätigung wird der Content hochgeladen und im Nutzerprofil sowie im Feed der Follower veröffentlicht.
+    Das System verarbeitet das Video, optimiert es für verschiedene Endgeräte und macht es innerhalb des Netzwerks innerhalb kurzer Zeit auffindbar.
+
+    \subsection*{3. Epic}
+    
+    Als \textcolor{blue}{Content Creator:in} möchte ich \textcolor{red}{Kurzvideos erstellen und mit meiner Community teilen}, um \textcolor{green}{meine Reichweite zu erhöhen und mit meinem Publikum zu interagieren}.
+
+    \subsection*{4. User Story}
+    
+    Als \textcolor{blue}{Instagram-User} möchte ich \textcolor{red}{ein bearbeitetes Video als Reel posten}, um \textcolor{green}{meine Erlebnisse mit meinen Followern zu teilen}.
+
+    \subsection*{5. Hierarchical Task Analysis (HTA)}
+    
+    \begin{center}
+    \begin{tikzpicture}[
+        node distance=0.4cm and 0.5cm,
+        maintask/.style={rectangle, draw, thick, text width=3.2cm, align=center, minimum height=0.55cm, fill=gray!10, font=\footnotesize},
+        task/.style={rectangle, draw, text width=2.8cm, align=center, minimum height=0.48cm, font=\tiny},
+        subtask/.style={rectangle, draw, text width=2.3cm, align=center, minimum height=0.42cm, font=\tiny},
+        minisubtask/.style={rectangle, draw, text width=2cm, align=center, minimum height=0.38cm, font=\tiny},
+        plan/.style={font=\tiny\itshape, text width=2.5cm, align=left}
+    ]
+    
+    % Level 0: Hauptziel
+    \node[maintask] (0) {0. Reel auf Instagram posten};
+    \node[plan, right=of 0, xshift=1cm] (p0) {Plan 0: 1-2-3-4-5};
+    
+    % Level 1: Task 1
+    \node[task, below=of 0, yshift=-0.2cm] (1) {1. Instagram-App starten};
+    
+    % Level 1: Task 2
+    \node[task, below=of 1, yshift=-0.2cm] (2) {2. Reel-Funktion aufrufen};
+    \node[subtask, right=of 2, xshift=0.3cm] (21) {2.1 Plus-Symbol tippen};
+    \node[subtask, right=of 21] (22) {2.2 „Reel" auswählen};
+
+    % Level 1: Task 3
+    \node[task, below=of 2, yshift=-0.2cm] (3) {3. Video vorbereiten};
+    \node[subtask, right=of 3, xshift=0.3cm] (31) {3.1 Galerie öffnen};
+    \node[subtask, right=of 31] (32) {3.2 Video selektieren};
+    
+    % Level 1: Task 4
+    \node[task, below=of 3, yshift=-0.2cm] (4) {4. Video bearbeiten};
+    \node[subtask, right=of 4, xshift=0.3cm] (41) {4.1 Video zuschneiden};
+    \node[subtask, right=of 41] (42) {4.2 Audio hinzufügen};
+    \node[subtask, right=of 42] (43) {4.3 Visuelle Effekte};
+    \node[subtask, right=of 43] (44) {4.4 Text-Overlays};
+    
+    % Level 3: Subtasks für 4.2
+    \node[minisubtask, below=of 42, yshift=-0.75cm] (421) {4.2.1 Musikbiblio. öffnen};
+    \node[minisubtask, right=of 421] (422) {4.2.2 Song wählen};
+    
+    % Level 3: Subtasks für 4.3
+    \node[minisubtask, below=of 43, yshift=-0.15cm] (431) {4.3.1 Filter anwenden};
+    \node[minisubtask, right=of 431] (432) {4.3.2 Farbkorrektur};
+    
+    % Level 1: Task 5
+    \node[task, below=of 4, yshift=-2.1cm] (5) {5. Reel publizieren};
+    \node[subtask, right=of 5, xshift=0.3cm] (51) {5.1 Metadaten eingeben};
+    \node[subtask, right=of 51] (52) {5.2 Vorschau prüfen};
+    \node[subtask, right=of 52] (53) {5.3 Teilen};
+    
+    % Level 3: Subtasks für 5.1
+    \node[minisubtask, below=of 51, yshift=-0.1cm] (511) {5.1.1 Standort taggen};
+    \node[minisubtask, right=of 511] (512) {5.1.2 Hashtags};
+    \node[minisubtask, right=of 512] (513) {5.1.3 Beschreibung};
+    
+    % Connections Level 0-1
+    \draw[-] (0) -- (1);
+    \draw[-] (1) -- (2);
+    \draw[-] (2) -- (21);
+    \draw[-] (21) -- (22);
+    \draw[-] (2) -- (3);
+    \draw[-] (3) -- (31);
+    \draw[-] (31) -- (32);
+    \draw[-] (3) -- (4);
+    \draw[-] (4) -- (41);
+    \draw[-] (41) -- (42);
+    \draw[-] (42) -- (43);
+    \draw[-] (43) -- (44);
+    \draw[-] (42) -- (421);
+    \draw[-] (421) -- (422);
+    \draw[-] (43) -- (431);
+    \draw[-] (431) -- (432);
+    \draw[-] (4) -- (5);
+    \draw[-] (5) -- (51);
+    \draw[-] (51) -- (52);
+    \draw[-] (52) -- (53);
+    \draw[-] (51) -- (511);
+    \draw[-] (511) -- (512);
+    \draw[-] (512) -- (513);
+    
+    \end{tikzpicture}
+    \end{center}
+
+\end{document}
